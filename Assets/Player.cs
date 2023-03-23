@@ -8,8 +8,16 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     public float ms;
     public float jumpForce;
-    public LayerMask ground;
     public LayerMask lift;
+    public LayerMask ground;
+
+    private bool isGround;
+    public Transform feet;
+    public float radius;
+
+    public float airTime;
+    private float airTimeCounter;
+    private bool isJumping;
      
     // Start is called before the first frame update
     void Start()
@@ -20,6 +28,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        isGround = Physics2D.OverlapCircle(feet.position, radius, ground);
         float horiz = Input.GetAxis("Horizontal");
 
 
@@ -36,9 +46,25 @@ public class Player : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Jump") && isGround())
+        if (isGround == true && Input.GetKeyDown(KeyCode.Space))
         {  
+            isJumping = true;
+            airTimeCounter = airTime;
             rb.AddForce(new Vector2(0, jumpForce));
+            
+        }
+
+        if(Input.GetKey(KeyCode.Space) && isJumping == true)
+        {
+            if(airTimeCounter > 0){
+                rb.AddForce(new Vector2(0, jumpForce));
+                airTimeCounter -= Time.deltaTime;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
 
         if (horiz > 0)
@@ -59,20 +85,6 @@ public class Player : MonoBehaviour
         {
             LiftMerah.active = false;
         }
-
-    }
-
-    bool isGround(){
-        Vector2 position = transform.position;
-        Vector2 direction = Vector2.down;
-        float distance = 1.1f;
-
-        RaycastHit2D hit = Physics2D.Raycast(position, direction, distance, ground);
-        if (hit.collider != null)
-        {
-            return true;
-        }
-        return false;
 
     }
 

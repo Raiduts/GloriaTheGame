@@ -20,7 +20,7 @@ public class LiftMerah : MonoBehaviour
         }
         else
         {
-            lift.velocity = new Vector2(0 , -1); 
+            lift.velocity = new Vector2(0 , -5); 
         }
     }
 }

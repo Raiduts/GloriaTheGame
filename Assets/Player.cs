@@ -18,11 +18,15 @@ public class Player : MonoBehaviour
     public float airTime;
     private float airTimeCounter;
     private bool isJumping;
+
+    private Vector3 respawnPoint;
+    public GameObject fallDetector;
      
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        respawnPoint = transform.position;
     }
 
     // Update is called once per frame
@@ -86,6 +90,7 @@ public class Player : MonoBehaviour
             LiftMerah.active = false;
         }
 
+        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
     bool isLift(){
@@ -100,5 +105,16 @@ public class Player : MonoBehaviour
         }
         return false;
 
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("WoodToken"))
+        {
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "FallDetector")
+        {
+            transform.position = respawnPoint;
+        }
     }
 }

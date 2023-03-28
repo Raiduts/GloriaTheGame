@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        airTimeCounter = airTime;
     }
 
     // Update is called once per frame
@@ -35,7 +36,6 @@ public class Player : MonoBehaviour
 
         isGround = Physics2D.OverlapCircle(feet.position, radius, ground);
         float horiz = Input.GetAxis("Horizontal");
-
 
         if (Input.GetKey(KeyCode.LeftShift))
         {    
@@ -49,13 +49,12 @@ public class Player : MonoBehaviour
            
         }
 
-
+        
         if (isGround == true && Input.GetKeyDown(KeyCode.Space))
         {  
+            rb.AddForce(new Vector2(0, jumpForce));
             isJumping = true;
             airTimeCounter = airTime;
-            rb.AddForce(new Vector2(0, jumpForce));
-            
         }
 
         if(Input.GetKey(KeyCode.Space) && isJumping == true)
@@ -63,6 +62,10 @@ public class Player : MonoBehaviour
             if(airTimeCounter > 0){
                 rb.AddForce(new Vector2(0, jumpForce));
                 airTimeCounter -= Time.deltaTime;
+            }
+            else
+            {
+                isJumping = false;
             }
         }
 

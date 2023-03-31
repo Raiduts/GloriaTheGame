@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0cda12e9ae58626408f98dfbd4f406a5
+guid: e2176f535e9775c47a3ba7ff0c247dee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,106 +105,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soil_package_0
+      name: Half Platfomr_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 74
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 6
+        y: 32
+        width: 51
+        height: 26
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bae8df4f92c6e1b47a6d02436bd2fb1e
-      internalID: 1561635555
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_1
-      rect:
-        serializedVersion: 2
-        x: 75
-        y: 74
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6cb95fac3067f349a79723247d3f43d
-      internalID: -788992506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_2
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 74
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 3, z: 2, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f53e7a470dcd7d49a547100318058ed
-      internalID: -1379910431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_3
-      rect:
-        serializedVersion: 2
-        x: 41
-        y: 8
-        width: 46
-        height: 46
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c47e04eb53eb8b47b07e80bd550509b
-      internalID: 341558831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_4
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 5
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ace8988fc98fcd94683a2c6c600c7fe8
-      internalID: 1708001734
+      spriteID: e185cfb2e9fb679469cb19b6267e2b1a
+      internalID: 712084660
       vertices: []
       indices: 
       edges: []
@@ -220,11 +136,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      soil_package_0: 1561635555
-      soil_package_3: 341558831
-      soil_package_4: 1708001734
-      soil_package_1: -788992506
-      soil_package_2: -1379910431
+      Half Platfomr_0: 712084660
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

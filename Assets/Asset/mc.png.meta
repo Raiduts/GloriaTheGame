@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0cda12e9ae58626408f98dfbd4f406a5
+guid: 7f2a58c99f3503c489f4d86463a9eaae
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 46
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,106 +105,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soil_package_0
+      name: mc_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 74
-        width: 52
-        height: 52
+        x: 3
+        y: 11
+        width: 100
+        height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bae8df4f92c6e1b47a6d02436bd2fb1e
-      internalID: 1561635555
+      spriteID: 99baef0c34c712243bc7877465cc86ec
+      internalID: 1777685775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soil_package_1
+      name: mc_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 74
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6cb95fac3067f349a79723247d3f43d
-      internalID: -788992506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_2
-      rect:
-        serializedVersion: 2
-        x: 141
-        y: 74
-        width: 52
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 3, z: 2, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f53e7a470dcd7d49a547100318058ed
-      internalID: -1379910431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soil_package_3
-      rect:
-        serializedVersion: 2
-        x: 41
+        x: 121
         y: 8
-        width: 46
-        height: 46
+        width: 99
+        height: 107
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c47e04eb53eb8b47b07e80bd550509b
-      internalID: 341558831
+      spriteID: 7fadcad239e89504cb14d54403ba0d22
+      internalID: -795897340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: soil_package_4
+      name: mc_2
       rect:
         serializedVersion: 2
-        x: 111
-        y: 5
-        width: 52
-        height: 52
+        x: 237
+        y: 8
+        width: 96
+        height: 109
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ace8988fc98fcd94683a2c6c600c7fe8
-      internalID: 1708001734
+      spriteID: 3ea49bffb75183e45ae414e3797211af
+      internalID: 1813466562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mc_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 8
+        width: 98
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615854171a6020642b6ea170b43fd486
+      internalID: -1049077690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mc_4
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 11
+        width: 96
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2614e9df1dc4e04f81f611f76609f83
+      internalID: 1893391744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mc_5
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 8
+        width: 98
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacc88fe691d44b48a9fa6fe34ea6163
+      internalID: 30502795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mc_6
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 8
+        width: 96
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0288ee8302d14b54c9d8a8ac30dc713a
+      internalID: 1686010735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mc_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8
+        width: 94
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08498a4b20b767948a4080f2cc04e589
+      internalID: 1679255366
       vertices: []
       indices: 
       edges: []
@@ -220,11 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      soil_package_0: 1561635555
-      soil_package_3: 341558831
-      soil_package_4: 1708001734
-      soil_package_1: -788992506
-      soil_package_2: -1379910431
+      mc_3: -1049077690
+      mc_2: 1813466562
+      mc_7: 1679255366
+      mc_1: -795897340
+      mc_0: 1777685775
+      mc_6: 1686010735
+      mc_4: 1893391744
+      mc_5: 30502795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

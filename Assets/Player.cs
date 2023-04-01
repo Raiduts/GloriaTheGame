@@ -61,6 +61,7 @@ public class Player : MonoBehaviour
         if (Data.health <= 0)
         {
             Destroy(gameObject);
+            
         }
     }
 

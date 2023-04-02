@@ -6,6 +6,7 @@ TagManager:
   tags:
   - WoodToken
   - FallDetector
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

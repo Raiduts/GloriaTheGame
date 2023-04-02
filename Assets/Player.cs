@@ -23,9 +23,12 @@ public class Player : MonoBehaviour
 
     private Vector3 respawnPoint;
     public GameObject fallDetector;
+    [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource woodSoundEffect;
+    [SerializeField] private AudioSource deathSoundEffect;
+    [SerializeField] private AudioSource teleportSoundEffect;
 
 
-     
     // Start is called before the first frame update
     void Start()
     {
@@ -60,8 +63,9 @@ public class Player : MonoBehaviour
     void Death(){
         if (Data.health <= 0)
         {
-            Destroy(gameObject);
-            
+            transform.position = respawnPoint;
+            deathSoundEffect.Play();
+            Data.health = 5;
         }
     }
 
@@ -92,6 +96,7 @@ public class Player : MonoBehaviour
             isJumping = true;
             airTimeCounter = airTime;
             rb.velocity = Vector2.up * jumpForce;
+            jumpSoundEffect.Play();
         }
 
         if (Input.GetButton("Jump") && isJumping == true)
@@ -115,13 +120,19 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("WoodToken"))
+        if (other.tag == "WoodToken")
         {
             Destroy(other.gameObject);
+            woodSoundEffect.Play();
         }
-        if (other.tag == "FallDetector")
+        else if (other.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+            teleportSoundEffect.Play();
+        }
+        else if (other.tag == "Checkpoint")
+        {
+            respawnPoint = transform.position;
         }
     }
 }

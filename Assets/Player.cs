@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource woodSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
     [SerializeField] private AudioSource teleportSoundEffect;
+    [SerializeField] private AudioSource damagedSoundEffect;
+    
 
 
     // Start is called before the first frame update
@@ -129,14 +131,16 @@ public class Player : MonoBehaviour
         else if (other.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+            Data.health--;
             teleportSoundEffect.Play();
         }
         else if (other.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
         }else if (other.tag == "Obstacle")
-        {
+        { 
             StartCoroutine(FlashDamage());
+            damagedSoundEffect.Play();
         }
     }
 

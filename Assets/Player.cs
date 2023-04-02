@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     private Vector3 respawnPoint;
     public GameObject fallDetector;
+    public SpriteRenderer sprite;
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource woodSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
@@ -133,6 +134,16 @@ public class Player : MonoBehaviour
         else if (other.tag == "Checkpoint")
         {
             respawnPoint = transform.position;
+        }else if (other.tag == "Obstacle")
+        {
+            StartCoroutine(FlashDamage());
         }
+    }
+
+    public IEnumerator FlashDamage()
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = Color.white;
     }
 }

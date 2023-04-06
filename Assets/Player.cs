@@ -63,7 +63,8 @@ public class Player : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
-    void Death(){
+    void Death()
+    {
         if (Data.health <= 0)
         {
             transform.position = respawnPoint;

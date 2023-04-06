@@ -5,12 +5,5 @@ using UnityEngine;
 public class Root : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag("Player"))
-        {
-            Data.health--;
-        }
-    }
-
+    
 }

@@ -147,6 +147,7 @@ public class Player : MonoBehaviour
     public IEnumerator FlashDamage()
     {
         sprite.color = Color.red;
+        Data.health--;
         yield return new WaitForSeconds(0.1f);
         sprite.color = Color.white;
     }

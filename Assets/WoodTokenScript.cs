@@ -13,7 +13,5 @@ public class WoodTokenScript : MonoBehaviour
     {
         transform.Rotate(0, 0.5f, 0);
     }
-
-
 }
 

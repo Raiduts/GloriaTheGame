@@ -131,6 +131,11 @@ public class Player : MonoBehaviour
             Destroy(other.gameObject);
             woodSoundEffect.Play();
         }
+        else if(other.tag == "StoneToken")
+        {
+            Destroy(other.gameObject);
+
+        }
         else if (other.tag == "FallDetector")
         {
             transform.position = respawnPoint;

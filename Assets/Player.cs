@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
 
-    Rigidbody2D rb;
+    static Rigidbody2D rb;
     public float walk;
     public float sprint;
     private float speed;
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     private Vector3 respawnPoint;
     public GameObject fallDetector;
     public SpriteRenderer sprite;
+    
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource woodSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
@@ -54,6 +55,8 @@ public class Player : MonoBehaviour
             speed = walk;
         }
 
+        
+
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = walk;
@@ -64,17 +67,17 @@ public class Player : MonoBehaviour
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
+    void FixedUpdate()
+    {
+        rb.velocity = new Vector2(directionInput * speed, rb.velocity.y);
+    }
+
     void Death()
     {
         if (Data.health <= 0)
         {
             SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector2(directionInput * speed, rb.velocity.y);
     }
 
     void FaceDirection()

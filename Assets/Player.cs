@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -67,9 +68,7 @@ public class Player : MonoBehaviour
     {
         if (Data.health <= 0)
         {
-            transform.position = respawnPoint;
-            deathSoundEffect.Play();
-            Data.health = 5;
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
         }
     }
 
@@ -132,6 +131,7 @@ public class Player : MonoBehaviour
         else if (other.tag == "FallDetector")
         {
             transform.position = respawnPoint;
+            rb.velocity = new Vector2(0, 0);
             Data.health--;
             teleportSoundEffect.Play();
         }

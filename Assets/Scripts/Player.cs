@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private float directionInput;
     public float jumpForce;
     public LayerMask ground;
+    private Animator anim;
 
     private bool isGround;
     public Transform feet;
@@ -39,6 +40,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         respawnPoint = transform.position;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -55,8 +57,6 @@ public class Player : MonoBehaviour
             speed = walk;
         }
 
-        
-
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             speed = walk;
@@ -65,8 +65,21 @@ public class Player : MonoBehaviour
         Jump();
         Death();
         fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+
+        UpdateAnimation();
     }
 
+    void UpdateAnimation()
+    {
+        if (directionInput > 0f || directionInput < 0f)
+        {
+            anim.SetBool("Running", true);
+        }
+        else
+        {
+            anim.SetBool("Running", false);
+        }
+    }
     void FixedUpdate()
     {
         rb.velocity = new Vector2(directionInput * speed, rb.velocity.y);

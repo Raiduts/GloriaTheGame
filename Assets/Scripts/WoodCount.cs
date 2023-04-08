@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class StoneCount : MonoBehaviour
+public class WoodCount : MonoBehaviour
 {
-    public static StoneCount instance;
+    public static WoodCount instance;
     public TextMeshProUGUI text;
-    int scoreStone;
+    static int score;
 
     void Start()
     {
@@ -17,9 +17,10 @@ public class StoneCount : MonoBehaviour
         }
     }
 
-    public void ChangeStone(int stoneValue)
+    public void ChangeWood(int woodValue)
     {
-        scoreStone += stoneValue;
-        text.text = scoreStone.ToString();
+        score += woodValue;
+        Stage1.woods = score;
+        text.text = score.ToString();
     }
 }

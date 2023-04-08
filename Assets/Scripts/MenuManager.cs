@@ -19,5 +19,6 @@ public class MenuManager : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(gameStartScene);
+        SaveData.NewGame();
     }
 }

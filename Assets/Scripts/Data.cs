@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerData : MonoBehaviour
+public class Data : MonoBehaviour
 {
     public int maxHealth;
     public static int health;

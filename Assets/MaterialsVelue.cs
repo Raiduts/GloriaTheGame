@@ -9,7 +9,7 @@ public class MaterialsVelue : MonoBehaviour
     public TextMeshProUGUI textStones;
     public TextMeshProUGUI textFoods;
 
-    void Start()
+    void Update()
     {
         textWoods.text = SaveData.woods.ToString();
         textStones.text = SaveData.stones.ToString();

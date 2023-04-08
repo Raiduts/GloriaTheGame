@@ -9,9 +9,9 @@ public class TextSlider : MonoBehaviour
 
     void Start()
     {
-        if (!PlayerPrefs.HasKey("mainVolume"))
+        if (!PlayerPrefs.HasKey("MainVolume"))
         {
-            PlayerPrefs.SetFloat("mainVolume", 100);
+            PlayerPrefs.SetFloat("MainVolume", Mathf.Log10(slider.value)*20);
             Load();
         }
         else
@@ -27,10 +27,10 @@ public class TextSlider : MonoBehaviour
     }
     private void Load()
     {
-        slider.value = PlayerPrefs.GetFloat("mainVolume");
+        slider.value = PlayerPrefs.GetFloat("MainVolume");
     }
     private void Save()
     {
-        PlayerPrefs.SetFloat("mainVolume", slider.value);
+        PlayerPrefs.SetFloat("MainVolume", slider.value);
     }
 }

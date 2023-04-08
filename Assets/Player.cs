@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer sprite;
     
     [SerializeField] private AudioSource jumpSoundEffect;
-    [SerializeField] private AudioSource woodSoundEffect;
+    [SerializeField] private AudioSource materialSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
     [SerializeField] private AudioSource teleportSoundEffect;
     [SerializeField] private AudioSource damagedSoundEffect;
@@ -126,15 +126,10 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "WoodToken")
+        if (other.tag == "WoodToken" || other.tag == "StoneToken" || other.tag == "FoodToken")
         {
             Destroy(other.gameObject);
-            woodSoundEffect.Play();
-        }
-        else if(other.tag == "StoneToken")
-        {
-            Destroy(other.gameObject);
-
+            materialSoundEffect.Play();
         }
         else if (other.tag == "FallDetector")
         {

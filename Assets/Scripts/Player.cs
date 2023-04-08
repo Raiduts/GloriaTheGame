@@ -163,6 +163,7 @@ public class Player : MonoBehaviour
         {
             Destroy(other.gameObject);
             deathSoundEffect.Play();
+            Application.Quit();
         }
     }
 

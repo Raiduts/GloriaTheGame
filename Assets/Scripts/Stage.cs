@@ -26,6 +26,8 @@ public class Stage : MonoBehaviour
             SaveData.woods += woods;
             SaveData.stones += stones;
             SaveData.foods += foods;
+            SaveData.progress++;
+            SaveData.Save();
         }
     }
 }

@@ -19700,7 +19700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416538787}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.12, y: -3.94, z: 0}
+  m_LocalPosition: {x: -9.89, y: -2.84, z: 0}
   m_LocalScale: {x: 1.7544181, y: -0.088079356, z: 0.36361}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25659,7 +25659,7 @@ GameObject:
   - component: {fileID: 2101276904}
   - component: {fileID: 2101276903}
   m_Layer: 0
-  m_Name: Stage1
+  m_Name: Stage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25677,6 +25677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d23d0d45e0ba9745b7f4b0acd437c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  woodNeeded: 5
+  stoneNeeded: 5
+  foodNeeded: 5
 --- !u!4 &2101276904
 Transform:
   m_ObjectHideFlags: 0

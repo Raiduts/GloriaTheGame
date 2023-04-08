@@ -11,6 +11,7 @@ public class WoodCount : MonoBehaviour
 
     void Start()
     {
+        text.text = Stage.woods.ToString();
         if(instance == null)
         {
             instance = this;
@@ -19,8 +20,7 @@ public class WoodCount : MonoBehaviour
 
     public void ChangeWood(int woodValue)
     {
-        score += woodValue;
-        Stage1.woods = score;
-        text.text = score.ToString();
+        Stage.woods++;
+        text.text = Stage.woods.ToString();
     }
 }

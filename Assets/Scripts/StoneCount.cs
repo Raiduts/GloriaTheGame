@@ -11,6 +11,7 @@ public class StoneCount : MonoBehaviour
 
     void Start()
     {
+        text.text = Stage.stones.ToString();
         if(instance == null)
         {
             instance = this;
@@ -19,8 +20,7 @@ public class StoneCount : MonoBehaviour
 
     public void ChangeStone(int stoneValue)
     {
-        score += stoneValue;
-        Stage1.stones = score;
-        text.text = score.ToString();
+        Stage.stones++;
+        text.text = Stage.stones.ToString();
     }
 }

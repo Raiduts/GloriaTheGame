@@ -7,10 +7,10 @@ public class foodCount : MonoBehaviour
 {
     public static foodCount instance;
     public TextMeshProUGUI text;
-    static int score;
 
     void Start()
     {
+        text.text = Stage.stones.ToString();
         if(instance == null)
         {
             instance = this;
@@ -19,8 +19,7 @@ public class foodCount : MonoBehaviour
 
     public void ChangeFood(int foodValue)
     {
-        score += foodValue;
-        Stage1.foods = score;
-        text.text = score.ToString();
+        Stage.foods++;
+        text.text = Stage.foods.ToString();
     }
 }

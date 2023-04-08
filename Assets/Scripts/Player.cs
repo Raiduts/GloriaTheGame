@@ -146,6 +146,11 @@ public class Player : MonoBehaviour
             StartCoroutine(FlashDamage());
             damagedSoundEffect.Play();
         }
+        else if (other.tag == "Artifact")
+        {
+            Destroy(other.gameObject);
+            deathSoundEffect.Play();
+        }
     }
 
     public IEnumerator FlashDamage()

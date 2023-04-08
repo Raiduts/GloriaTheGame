@@ -1,21 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 public class TextSlider : MonoBehaviour
 {
-    public TextMeshProUGUI numberText;
-    private Slider slider; 
+    [SerializeField] Slider slider; 
 
     void Start()
     {
-        slider = GetComponent<Slider>();
-        SetNumberText(slider.value);
+        if (!PlayerPrefs.HasKey("mainVolume"))
+        {
+            PlayerPrefs.SetFloat("mainVolume", 100);
+            Load();
+        }
+        else
+        {
+            Load();
+        }
     }
-    public void SetNumberText(float value)
+
+    public void ChangeVolume()
     {
-        numberText.text = value.ToString();
+        AudioListener.volume = slider.value;
+        Save();
+    }
+    private void Load()
+    {
+        slider.value = PlayerPrefs.GetFloat("mainVolume");
+    }
+    private void Save()
+    {
+        PlayerPrefs.SetFloat("mainVolume", slider.value);
     }
 }

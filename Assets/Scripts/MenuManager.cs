@@ -10,10 +10,10 @@ public class MenuManager : MonoBehaviour
     public void Resume()
     {
         SceneManager.LoadScene(gameStartScene);
-        SaveData.Load();
     }
     public void QuitGame()
     {
+        SaveData.Save();
         Application.Quit();
     }
     public void NewGame()

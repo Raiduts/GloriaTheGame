@@ -21,9 +21,11 @@ public class BuildHouse1 : MonoBehaviour
         {
             rumah.SetActive(true);
             template.SetActive(false);
+            SaveData.rumah += 1;
             SaveData.woods -= woodMaterial;
             SaveData.stones -= stoneMaterial;
             SaveData.foods -= foodMaterial;
+            SaveData.Save();
         }
     }
 }
